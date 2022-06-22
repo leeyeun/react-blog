@@ -1,6 +1,5 @@
 import "./banner.css";
 export default function Banner(blog) {
-  console.log(blog);
   return (
     <div className="banner">
       <div className="max-width">

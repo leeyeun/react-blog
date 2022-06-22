@@ -1,5 +1,4 @@
 export default function Author(posts) {
-  console.log("author", posts);
   return (
     <dl className="author-wrap">
       <dt className="a11y-hidden">Author</dt>

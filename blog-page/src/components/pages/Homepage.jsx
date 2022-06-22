@@ -6,6 +6,7 @@ import PostList from "../PostList/PostList";
 import { data } from "../../data/data";
 import React from "react";
 export default function Homepage() {
+  console.log("data", data);
   return (
     <div>
       <Header />

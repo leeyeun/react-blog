@@ -9,6 +9,7 @@ function App() {
       <BrowserRouter>
         <Route exact path="/" component={Homepage}></Route>
         <Route exact path="/postview" component={PostView}></Route>
+        <Route exact path="/postview/:id" component={PostView}></Route>
       </BrowserRouter>
       {/* <Homepage />
       <PostView /> */}

@@ -6,7 +6,7 @@ import React from "react";
 
 export default function PostList(posts) {
   // console.log("data", data);
-  console.log("posts", posts);
+  // console.log("posts", posts);
   // const datas = posts;
   // console.log("data", datas);
   return (

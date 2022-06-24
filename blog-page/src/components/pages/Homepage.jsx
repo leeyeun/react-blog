@@ -5,40 +5,22 @@ import PostList from "../PostList/PostList";
 // import { data } from "../../data/data";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-export default function Homepage() {
-  const [postsData, setPostData] = useState([]);
-  const [datas, setDatas] = useState(false);
-  // console.log("data", data);
-  useEffect(() => {
-    axios
-      .get("/data.json")
-      .then((res) => {
-        setPostData(res.data);
-        console.log(postsData);
-      })
-      .catch((err) => console.log(err));
-
-    // console.log(postsData);
-  }, [datas]);
-
-  const datalist = () => {
-    // axios
-    //   .get("/data.json")
-    //   .then((res) => setPostData(res.data))
-    //   .catch((err) => console.log(err));
-    // console.log(postsData);
-  };
+export default function Homepage(posts) {
+  console.log(posts.posts.posts);
+  console.log(posts.posts);
+  console.log(posts);
 
   return (
     <div>
       <Header />
-      {/* {data.map((item) => (
+      {/* {postsData.map((item) => (
         <React.Fragment key={item}>
           <Banner blog={item.blog} />
           <PostList posts={item.posts} />
         </React.Fragment>
       ))} */}
-
+      <Banner blog={posts.posts.blog} />
+      <PostList posts={posts.posts.posts} />
       <Footer />
     </div>
   );

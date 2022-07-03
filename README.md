@@ -19,6 +19,6 @@
 4. 더미 데이터를 가져와 게시글, 블로그 정보, 유저정보 뿌려주기
 
 
-###배포 url 
+### 배포 url 
 ---
 https://leeyeun.github.io/react-blog/blog-page

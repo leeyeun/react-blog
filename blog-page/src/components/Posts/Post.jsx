@@ -23,7 +23,7 @@ export default function Post(posts) {
             </div>
           </article>
         </Link>
-        <Route path="/postview/:id" render={() => <PostView />}></Route>
+        {/* <Route path="/postview/:id" render={() => <PostView />}></Route> */}
       </li>
       {/* ))} */}
     </>

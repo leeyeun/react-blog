@@ -1,87 +1,34 @@
+import ViewBanner from "../Banner/ViewBanner";
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
+import Author from "./Autor";
+import Content from "./Content";
+import PostButton from "./PostButton";
+import PostCategory from "./PostCategory";
 import "./postview.css";
-export default function PostView(data) {
-  console.log(data);
-  return (
-    <div className="view">
-      <div className="max-width">
-        <section className="wrap-box">
-          <div className="inner">
-            {/* <!-- author --> */}
-            <dl className="author-wrap">
-              <dt className="a11y-hidden">Author</dt>
-              <dd className="author">
-                <img src="./images/profile.jpg" alt="" /> Chilli
-              </dd>
-              <dt className="a11y-hidden">Created</dt>
-              <dd className="created">2022.05.25</dd>
-            </dl>
-            {/* <!-- //author --> */}
-
-            {/* <!-- category --> */}
-            <dl className="category">
-              <dt className="a11y-hidden">Category</dt>
-              <dd>Life</dd>
-              <dd>Style</dd>
-            </dl>
-            {/* <!-- //category --> */}
-            <div className="title-wrap">
-              <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
-              <button className="btn-like">Like</button>
+import Title from "./TItle";
+export default function PostView(posts) {
+    console.log(posts);
+    console.log(posts.posts[0].id);
+    return (
+        <>
+            <Header />
+            <ViewBanner />
+            <div className="view">
+                <div className="max-width">
+                    <section className="wrap-box">
+                        <div className="inner">
+                            <Author />
+                            <PostCategory />
+                            <Title />
+                            <hr />
+                            <Content />
+                            <PostButton />
+                        </div>
+                    </section>
+                </div>
             </div>
-            <hr />
-            <div className="view-contents">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Inventore illum nostrum perferendis voluptas, voluptate soluta
-                corrupti dolore quidem. Placeat, eaque! Exercitationem est
-                facilis dolor quas odio cum incidunt repudiandae vel. Lorem
-                ipsum dolor sit amet consectetur, adipisicing elit. Inventore
-                illum nostrum perferendis voluptas, voluptate soluta corrupti
-                dolore quidem. Placeat, eaque! Exercitationem est facilis dolor
-                quas odio cum incidunt repudiandae vel. Lorem ipsum dolor sit
-                amet consectetur, adipisicing elit. Inventore illum nostrum
-                perferendis voluptas, voluptate soluta corrupti dolore quidem.
-                Placeat, eaque! Exercitationem est facilis dolor quas odio cum
-                incidunt repudiandae vel. Lorem ipsum dolor sit amet
-                consectetur, adipisicing elit. Inventore illum nostrum
-                perferendis voluptas, voluptate soluta corrupti dolore quidem.
-                Placeat, eaque! Exercitationem est facilis dolor quas odio cum
-                incidunt repudiandae vel.
-              </p>
-              <img src="./images/post-background6.jpg" alt="" />
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Inventore illum nostrum perferendis voluptas, voluptate soluta
-                corrupti dolore quidem. Placeat, eaque! Exercitationem est
-                facilis dolor quas odio cum incidunt repudiandae vel. Lorem
-                ipsum dolor sit amet consectetur, adipisicing elit. Inventore
-                illum nostrum perferendis voluptas, voluptate soluta corrupti
-                dolore quidem. Placeat, eaque! Exercitationem est facilis dolor
-                quas odio cum incidunt repudiandae vel. Lorem ipsum dolor sit
-                amet consectetur, adipisicing elit. Inventore illum nostrum
-                perferendis voluptas, voluptate soluta corrupti dolore quidem.
-                Placeat, eaque! Exercitationem est facilis dolor quas odio cum
-                incidunt repudiandae vel. Lorem ipsum dolor sit amet
-                consectetur, adipisicing elit. Inventore illum nostrum
-                perferendis voluptas, voluptate soluta corrupti dolore quidem.
-                Placeat, eaque! Exercitationem est facilis dolor quas odio cum
-                incidunt repudiandae vel.
-              </p>
-            </div>
-            <div className="btn-group">
-              <a href="/" className="btn-modify">
-                <span className="a11y-hidden">modify</span>
-              </a>
-              <button type="button" className="btn-delete">
-                <span className="a11y-hidden">delete</span>
-              </button>
-            </div>
-            <a href="./" className="btn-back">
-              <span className="a11y-hidden">Back</span>
-            </a>
-          </div>
-        </section>
-      </div>
-    </div>
-  );
+            <Footer />
+        </>
+    );
 }
